@@ -1,0 +1,45 @@
+[server]
+# Port to run the chooser on.
+port = 3000
+
+[auth]
+# Requires Authentication Server (https://github.com/enix12x/pathfinder-authserver)
+enabled = true
+authServerUrl = "http://localhost:4001"
+apiSecret = "YOUR_SECRET"
+
+[Branding]
+Title = "Pathfinder"
+Subtitle = "Your navigation hub"
+
+[Admin]
+PanelUrl = "http://localhost:4002"
+
+[[Menu.Item]]
+Id = "google"
+Name = "Google"
+Type = "link"
+Link = "https://google.com"
+
+# For an in depth tutorial for Menu Items, check ... It is recommended to use the auth server, as this has a proper UI.
+[[Menu.Item]]
+Id = "tools"
+Name = "Tools"
+Type = "submenu"
+
+    [[Menu.Item.Children]]
+    Id = "ping"
+    Name = "Ping Tool"
+    Type = "link"
+    Link = "https://example.com/ping"
+
+    [[Menu.Item.Children]]
+    Id = "network"
+    Name = "Network Tools"
+    Type = "submenu"
+
+        [[Menu.Item.Children.Children]]
+        Id = "dns"
+        Name = "DNS Checker"
+        Type = "link"
+        Link = "https://example.com/dns"
