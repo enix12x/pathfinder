@@ -4,7 +4,7 @@ port = 3000
 
 [auth]
 # Requires Authentication Server (https://github.com/enix12x/pathfinder-authserver)
-enabled = true
+enabled = false
 authServerUrl = "http://localhost:4001"
 apiSecret = "YOUR_SECRET"
 
@@ -21,7 +21,7 @@ Name = "Google"
 Type = "link"
 Link = "https://google.com"
 
-# For an in depth tutorial for Menu Items, check ... It is recommended to use the auth server, as this has a proper UI.
+# It is recommended to use the auth server, as this has a proper UI.
 [[Menu.Item]]
 Id = "tools"
 Name = "Tools"
