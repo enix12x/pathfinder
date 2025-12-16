@@ -1,0 +1,13 @@
+[Unit]
+Description=Pathfinder
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /srv/pathfinder/dist/index.js
+WorkingDirectory=/srv/pathfinder
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
